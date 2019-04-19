@@ -8,8 +8,8 @@ def page_not_found(e):
 	return render_template("404.html")
 
 @app.route('/api/pokemon/',methods=['GET','POST'])
-def pokeman():
-	data={'pokeman':["bulbasaur","charmander","squirtle"]}
+def pokemon():
+	data={'pokemon':["bulbasaur","charmander","squirtle"]}
 	return json.dumps(data)
 		
 if (__name__=='__main__'):
