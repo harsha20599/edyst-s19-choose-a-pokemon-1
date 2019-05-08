@@ -1,11 +1,17 @@
 <html>
 <head>
     <style>
+        body{
+            /* Adding default font and resetting the default things */
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
         /* The container to hold all the cards  */
         .main {
             background-color: #f7f7f7;
-	        width:900;
-		    height:500;
+            /* Limitted the maximum width to work with flexbox */
+	        max-width:900;
 	        margin: 40px auto 40px auto;	
 	        justify-content: space-around;
 	        margin-top: 10px;
@@ -14,58 +20,58 @@
 
         .row {
             display: flex;
+            /* Flex wrap to display the remaning cards into next line */
+            flex-wrap: wrap;
             padding-top: 5%
  
         }
 
         /* Create three equal columns that sits next to each other */
+        /* All the common pokemon pokemon properties into single division */
         .column {
-            display: flex;
-            padding: 15px;
-        }
-        
-        /* the card having the bulbasaur */
-        .bulbasaur {
-            background-color: #e6ffe6;
-	        width: 250;
-	        height:350;
-            border: 2px solid #b3ffb3;
+            padding: 15px;            
+	        height:370;
+	        width: 230;
+            margin: 10px;
             border-radius: 10px;
 	        display:flex;
             flex-direction:column;
 	        align-items:center;
             padding-bottom: 10px;
         }
+        /* Center alignment of pokemon title  */
+        .column h4{
+            text-align: center;
+        }
+        
+        /* the card having the bulbasaur */
+        .bulbasaur {
+            background-color: #e6ffe6;
+            border: 2px solid #b3ffb3;
+        }
         
         /*the card having charmander*/
         .charmander {
             background-color: #f3d1d1;
-	        width: 250;
-            height: 350;
             border: 2px solid #faab76;
-            border-radius: 10px;
-	        display:flex;
-            flex-direction:column;
-	        align-items:center;
-            padding-bottom: 10px;     
         }
         
         /*the card having squirtle*/
         .squirtle {
             background-color: #c8e2f1;
-	        width:250;
-            height:350;
             border: 2px solid #9cdffa;
-            border-radius: 10px;
-	        display:flex;
-	        flex-direction:column;
-	        align-items:center;  
-            padding-bottom: 10px;  
         }
 
         .code{
             display: flex;
             align-self: flex-start;
+        }
+        /* beautifying the id of pokemon */
+        .code h4{
+            padding: 5px;
+            font-family: monospace;
+            color: #fff;
+            border-radius: 2px;
         }
         
         /*handles all the three images of pokemons*/
@@ -84,9 +90,9 @@
     <!-- A container to hold all the three cards  -->
     <div class="main">
         <div class="row">
-            <div class="column"> 
+            <div class="column bulbasaur"> 
                 <!-- holds the bulbasaur card  --> 
-                <div class="bulbasaur"> 
+                <div class=""> 
                     <!-- displays number code on top of card  -->
                     <div class="code">
                         <h4 style="background-color:#5cd65c "><b>#001</b></h4>
@@ -96,9 +102,9 @@
                     <h4>Bulbasaur</h4>
                 </div>
             </div>
-            <div class="column">
+            <div class="column charmander">
                 <!-- holds the entire charmander card -->
-                <div class="charmander">
+                <div class="">
                     <!--displays number code on top of card -->
                     <div class="code">
                         <h4 style="background-color:#fa4545 "><b>#004</b></h4>
@@ -108,9 +114,9 @@
                     <h4>Charmander</h4>
                 </div>
             </div>
-            <div class="column">
+            <div class="column squirtle">
                 <!-- holds the entire squirtle card -->
-                <div class="squirtle">
+                <div class="">
                     <!-- displays number code on top of card  -->
                     <div class="code">
                         <h4 style="background-color:#32b6f3 "><b>#007</b></h4>
